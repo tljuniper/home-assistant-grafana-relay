@@ -66,9 +66,6 @@ func notify(hookData GrafanaJson) {
 	postBody, err := json.Marshal(map[string]interface{}{
 		"message": hookData.Message,
 		"title":   hookData.Title,
-		"data": map[string]string{
-			"image": hookData.ImageURL,
-		},
 	})
 
 	if err != nil {
